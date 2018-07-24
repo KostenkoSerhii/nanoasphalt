@@ -1,0 +1,256 @@
+.hero
+	padding-top: 128px
+.hslider
+	padding: 0 33px
+	position: relative
+	&__slide
+		color: $white
+	&__title
+		font-size: 36px
+		font-weight: 700
+		margin-bottom: 40px
+		text-align: center
+	&__sub-title
+		font-size: 30px
+		margin-bottom: 40px
+		text-align: center
+	&__inner
+		font-size: 0
+	&__img
+		display: inline-block
+		vertical-align: top
+		margin-right: 35px
+	&__right
+		display: inline-block
+		vertical-align: top
+		.dot-list
+			margin-top: 60px
+	.slick-arrow
+		top: 40%
+.aft-hero-sec
+	padding-top: 60px
+	padding-bottom: 60px
+	.article
+		+clr
+		img
+			float: right
+			margin-left: 30px
+.low-price
+	padding-top: 48px
+	padding-bottom: 43px
+	&__inner
+		padding-left: 80px
+	.title-sm
+		margin-bottom: 40px
+	.title-md
+		margin-bottom: 50px
+.home-prods
+	padding-top: 34px
+	padding-bottom: 34px
+	&__inner
+		font-size: 0
+		max-width: 975px
+		margin-left: auto
+		margin-right: auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.article
+		margin-bottom: 48px
+		max-width: 920px
+		margin-left: auto
+		margin-right: auto
+	.title
+		margin-bottom: 80px
+.hprod
+	// margin-bottom: 30px
+	display: inline-block
+	vertical-align: top
+	width: 420px
+	text-align: center
+	&__img
+		width: 320px
+		height: 290px
+		margin-bottom: 26px
+		position: relative
+		margin-left: auto
+		margin-right: auto
+		&:before
+			content: ''
+			position: absolute
+			bottom: -5px
+			width: 68px
+			height: 5px
+			background: $orange
+			left: 55%
+			transform: translateX(-50%)
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__title
+		color: #010100
+		font-family: Roboto
+		font-size: 24px
+		font-weight: 700
+		margin-bottom: 12px
+	a
+		display: inline-block
+		vertical-align: top
+		color: $black2
+		font-size: 24px
+		text-decoration: underline
+		margin-bottom: 15px
+
+		position: relative
+		// &:after
+		// 	content: ''
+		// 	position: absolute
+		// 	height: 2px
+		// 	width: 100%
+		// 	left: 0
+		// 	bottom: 0
+		// 	background: $black2
+		// 	+trans
+		&:last-of-type
+			margin-bottom: 0
+		&:hover
+			text-decoration: none
+.advantages-sec
+	padding-top: 60px
+	padding-bottom: 88px
+	&__inner
+		padding-left: 36px
+	.title
+		margin-bottom: 69px
+.form-sec
+	padding-top: 25px
+	padding-bottom: 70px
+
+.form-decor
+	border-left: 2px solid $white
+	border-right: 2px solid $white
+	border-bottom: 2px solid $white
+	padding: 32px 0px 44px
+	position: relative
+	max-width: 945px
+	margin-left: auto
+	margin-right: auto
+	p
+		font-size: 18px
+		text-align: center
+		color: $white
+		margin-bottom: 46px
+	&__inner
+		padding: 0 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.title-sm--line
+		position: absolute
+		top: 1px
+		transform: translateY(-50%)
+		left: 0
+		width: 100%
+.why-we
+	background-color: #f8f8f8
+	padding-top: 66px
+	padding-bottom: 21px
+	margin-bottom: 63px
+	&__inner
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.why-we-item
+			flex-basis: 25%
+	.title
+		margin-bottom: 65px
+.why-we-item
+	margin-bottom: 50px
+	display: inline-block
+	vertical-align: top
+	padding: 0 5px
+	text-align: center
+	&__img
+		margin-bottom: 27px
+		img
+			max-width: 92px
+			max-height: 93px
+			height: auto
+	&__text
+		font-size: 18px
+.how-work
+	margin-bottom: 69px
+	&__inner
+		max-width: 945px
+		margin-left: auto
+		margin-right: auto
+	.title
+		margin-bottom: 50px
+	.decor-block
+		margin-bottom: 60px
+
+.reviews
+	padding-top: 68px
+	padding-bottom: 75px
+	margin-bottom: 30px
+	&__inner
+	.title
+		margin-bottom: 72px
+
+.r-slider
+	&__slide
+	&__slide-inner
+		max-width: 945px
+		margin-left: auto
+		margin-right: auto
+		display: flex
+	&__photo
+		border: 1px solid $orange4
+		width: 264px
+		height: 264px
+		display: inline-block
+		vertical-align: top
+		flex-grow: 0
+		flex-shrink: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__right
+		display: inline-block
+		vertical-align: top
+		flex-grow: 1
+	&__top, &__date, &__text
+		color: $white
+		font-weight: 300
+		padding-left: 28px
+	&__top
+		border-bottom: 2px solid #fdb51a
+		padding-top: 5px
+		padding-bottom: 8px
+		font-size: 24px
+		margin-bottom: 8px
+		span
+			font-size: 18px
+	&__date
+		margin-bottom: 20px
+	&__text
+.pre-foot
+	margin-bottom: 16px
+	text-align: center
+	&__inner
+		width: 246px
+		margin-left: auto
+		margin-right: auto
+	p
+		margin-bottom: 19px
+		font-size: 22px
+	.link-orange
+		margin-bottom: 16px
+	.btn
+		margin-bottom: 24px
+	.btn, .socials
+		width: 225px
+	.title
+		margin-bottom: 20px

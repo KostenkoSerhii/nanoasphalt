@@ -1,0 +1,22 @@
+<div class="popup popup--form js-popup " data-popup="popup-form">
+	<div class="popup__overlay js-popup-overlay"></div>
+	<div class="popup__content  js-popup-content">
+		<div class="popup__close js-close-popup ">{{mixins.icon('close')}}</div>
+		<div class="form-decor">
+			<h4 class="title-sm title-sm--orange title-sm--line"><span>Оставьте свои контактные данные</span></h4>
+			<p>Наши менеджеры свяжутся с Вами и ответят на Ваши вопросы</p>
+			<form action="mail.php">
+				<div class="form-decor__inner">
+					<div class="field field--white ">
+						<input class="js-form-field" type="text" name="name" placeholder="Ваше имя">
+					</div>
+					<div class="field field--white ">
+						<input class="js-form-field" type="text" name="phone" placeholder="Ваш телефон">
+					</div>
+					<button class="btn-simple" type="submit">Оставить заявку</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

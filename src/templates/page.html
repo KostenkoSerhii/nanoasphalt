@@ -1,0 +1,23 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "components/_header.html" %}
+{% include "partials/_hero.html" %}
+{% include "partials/_after-hero-section.html" %}
+{% include "partials/_lower-price-section.html" %}
+{% include "partials/_home-prod-section.html" %}
+{% include "partials/_advantages.html" %}
+{% include "partials/_form-sec.html" %}
+{% include "partials/_why-we.html" %}
+{% include "partials/_how-work.html" %}
+{% include "partials/_reviews.html" %}
+{% include "partials/_pre-foot.html" %}
+{% include "components/_footer.html" %}
+{% include "components/_popup-form.html" %}
+{% include "components/_popup-thank.html" %}
+<a class="js-popup-thank js-popup-link" data-popup="popup-thank" href="#" style="display: none"></a>
+{% endblock %}

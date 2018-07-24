@@ -1,0 +1,49 @@
+.btn, .btn-border, .btn-simple
+	+rob
+	display: inline-block
+	vertical-align: top
+	appearance: none
+	border: none
+	background: none
+.btn
+	font-size: 16px
+	color: $white
+	min-width: 180px
+	padding: 3px 5px 4px
+	text-align: center
+	background-color: $orange
+	border: 1px solid $orange
+	+trans
+	&:hover
+		background: $white
+		color: $orange
+	&--big
+		padding: 6px 5px 6px
+.btn-border
+	min-width: 263px
+	padding: 10px 10px 11px
+	text-align: center
+	background-color: $orange
+	border: 1px solid $black
+	border-radius: 4px
+	font-size: 20px
+	color: $black
+	background-image: linear-gradient(to top, #fda701 0%, #fdd601 100%)
+	box-shadow: 0 0 10px 1px transparent
+	+trans
+	&:hover
+		box-shadow: 0 0 10px 1px $black
+.btn-simple
+	min-width: 242px
+	padding: 10px 10px 11px
+	text-align: center
+	background: $orange
+	border: 1px solid $orange
+	border-radius: 4px
+	font-size: 20px
+	color: $black
+	+trans
+	&:hover
+		background: $white
+		color: $orange
+

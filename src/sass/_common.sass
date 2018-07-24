@@ -1,0 +1,178 @@
+=rob
+	font-family: 'Roboto', sans-serif
+
+$white: #fff
+$black: #000
+$black2: $black
+$orange: #fdb301
+$orange2: #f2ac04
+$orange3: #fdbf01
+$orange4: #fdad01
+
+body
+	background: $white
+	line-height: 1.2
+	+rob
+	color: $black2
+	font-size: 18px
+a
+	text-decoration: none
+
+h1,h2,h3,h4,h5,h6
+	font-weight: normal
+strong
+	font-weight: 700
+.title-sm
+	color: $white
+	font-size: 24px
+	font-weight: 700
+	text-align: center
+	&--orange
+		color: $orange4
+	&--line
+		display: flex
+		align-items: center
+		justify-content: center
+		span
+			display: block
+			margin: 0 12px
+		&:before, &:after
+			background: $white
+			content: ''
+			height: 2px
+			flex-grow: 555
+.title-l
+	color: $white
+	font-size: 30px
+	font-weight: 700
+	text-align: center
+	margin-bottom: 28px
+.title-md
+	color: $orange4
+	font-size: 27px
+	font-weight: 700
+	text-align: center
+.title
+	text-align: center
+	font-size: 36px
+	color: $black
+	font-weight: 300
+	margin-bottom: 60px
+	strong
+		color: $orange4
+	&--sm-font
+		font-size: 30px
+	&--white
+		color: $white
+
+.bg-styles
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+
+.dot-list
+	margin-bottom: 60px
+	li
+		position: relative
+		padding-left: 35px
+		font-size: 30px
+		color: $white
+		margin-bottom: 38px
+		&:last-of-type
+			margin-bottom: 0
+		&:before
+			content: ''
+			position: absolute
+			width: 13px
+			height: 13px
+			background-color: $orange3
+			left: 0
+			top: 11px
+			border-radius: 50%
+.check-list
+	li
+		padding-left: 62px
+		position: relative
+		font-size: 18px
+		font-weight: 300
+		margin-bottom: 40px
+		&:last-of-type
+			margin-bottom: 0
+		i
+			position: absolute
+			line-height: 1
+			font-size: 0
+			display: block
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 32px
+			height: 32px
+			background-color: #fdb51a
+			&:before
+				content: ''
+				+vcenter
+				+s(check)
+.article
+	color: #010100
+	font-size: 18px
+	font-weight: 300
+	ul
+		li
+			margin-bottom: 17px
+			&:last-of-type
+				margin-bottom: 0
+	p
+		margin-bottom: 17px
+		&:last-of-type
+			margin-bottom: 0
+	&--white
+		color: $white
+	&--sm-pad
+		ul li, p
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
+.decor-block
+	padding-left: 15px
+	border-left: 3px solid $orange
+.video-block
+	border-top: 3px solid $orange4
+	border-bottom: 3px solid $orange4
+	width: 945px
+	height: 535px
+	margin-left: auto
+	margin-right: auto
+	iframe
+		width: 100%
+		height: 100%
+.link-orange
+	color: $orange4
+	font-size: 27px
+	font-weight: 700
+	display: inline-block
+	vertical-align: top
+
+.socials
+	display: inline-flex
+	justify-content: space-between
+	font-size: 0
+	a
+		width: 35px
+		height: 35px
+		
+		+trans
+		position: relative
+		&:hover
+			background-color: $orange
+			svg
+				fill: $white
+	i
+		line-height: 1
+		+vcenter
+	svg
+		fill: $black
+		font-size: 20px
+		+trans
+.is-hidden
+	overflow: hidden
