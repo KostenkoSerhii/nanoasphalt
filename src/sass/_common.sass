@@ -15,6 +15,8 @@ body
 	+rob
 	color: $black2
 	font-size: 18px
+	+m
+		font-size: 16px
 a
 	text-decoration: none
 
@@ -27,6 +29,10 @@ strong
 	font-size: 24px
 	font-weight: 700
 	text-align: center
+	+md
+		font-size: 20px
+	+sm
+		font-size: 18px
 	&--orange
 		color: $orange4
 	&--line
@@ -52,6 +58,10 @@ strong
 	font-size: 27px
 	font-weight: 700
 	text-align: center
+	+md
+		font-size: 25px
+	+sm
+		font-size: 20px
 .title
 	text-align: center
 	font-size: 36px
@@ -60,10 +70,28 @@ strong
 	margin-bottom: 60px
 	strong
 		color: $orange4
+	+md
+		font-size: 26px
+	+sm
+		font-size: 22px
 	&--sm-font
 		font-size: 30px
 	&--white
 		color: $white
+	&--decor
+		position: relative
+		margin-bottom: 60px
+		font-weight: 700
+		&:before
+			content: ''
+			position: absolute
+			bottom: -10px
+			width: 30px
+			height: 5px
+			background: $orange
+			left: 50%
+			transform: translateX(-50%)
+
 
 .bg-styles
 	background-position: 50% 50%
@@ -72,12 +100,21 @@ strong
 
 .dot-list
 	margin-bottom: 60px
+	+md
+		margin-bottom: 40px
+
 	li
 		position: relative
 		padding-left: 35px
 		font-size: 30px
 		color: $white
 		margin-bottom: 38px
+		+r(1200)
+			font-size: 22px
+			margin-bottom: 20px
+		+xs
+			font-size: 16px
+			margin-bottom: 10px
 		&:last-of-type
 			margin-bottom: 0
 		&:before
@@ -89,6 +126,10 @@ strong
 			left: 0
 			top: 11px
 			border-radius: 50%
+			+r(1200)
+				top: 7px
+			+xs
+				top: 2px
 .check-list
 	li
 		padding-left: 62px
@@ -96,6 +137,10 @@ strong
 		font-size: 18px
 		font-weight: 300
 		margin-bottom: 40px
+		+md
+			padding-left: 26px
+			margin-bottom: 20px
+			font-size: 16px
 		&:last-of-type
 			margin-bottom: 0
 		i
@@ -109,23 +154,134 @@ strong
 			width: 32px
 			height: 32px
 			background-color: #fdb51a
+			+md
+				width: 20px
+				height: 20px
+				top: 0px
+				transform: translateY(0%)
 			&:before
 				content: ''
 				+vcenter
 				+s(check)
+.article-wrapper
+	padding-top: 150px
+	margin-bottom: 50px
+	background-size: cover
+
+	+m
+		padding-top: 250px
+.imgs-section
+	margin: 50px 0
+	display: flex
+	justify-content: space-around
+	font-size: 0
+	+md
+		margin: 30px 0
+	+sm
+		display: block
+	&__item
+		position: relative
+		img
+			max-width: 100%
+			height: auto
+		+md
+			width: 220px
+		+sm
+			width: auto
+			max-width: 300px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 35px
+			text-align: center
+		i
+			width: 50px
+			height: 50px
+			background-color: #fcbf00
+			color: white
+			font-size: 30px
+			font-weight: 700
+			text-align: center
+			display: block
+			font-style: normal
+			line-height: 50px
+			position: absolute
+			border-radius: 50%
+			top: 0
+			left: 0
+			transform: translate(-20%, -30%)
+	&--4-img
+		margin: 20px 0 0
+		justify-content: space-between
+		flex-shrink: 1
+		.imgs-section__item
+			margin: 0px 15px
+			+sm
+				margin: 0 auto 20px
+			&:first-of-type
+				margin-left: 0
+				+sm
+					margin: 0 auto 20px
+			&:last-of-type
+				margin-right: 0
+				+sm
+					margin: 0 auto 
+			img
+				max-width: 100%
+				height: auto
 .article
 	color: #010100
 	font-size: 18px
 	font-weight: 300
+	+m
+		font-size: 16px
 	ul
 		li
 			margin-bottom: 17px
 			&:last-of-type
 				margin-bottom: 0
+		&.dot-list
+			li
+				color: #393a3d
+				font-size: 18px
+				font-weight: 300
+				padding-left: 24px
+				&:before
+					top: 3px
+				+m
+					font-size: 16px
 	p
 		margin-bottom: 17px
+		+sm
+			margin-bottom: 10px
 		&:last-of-type
 			margin-bottom: 0
+
+	&__img
+		float: left
+		margin-right: 40px
+		position: relative
+		top: -40px
+
+		+sm
+			float: none
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 30px
+			top: 0
+	h2
+		color: #393a3d
+		font-size: 24px
+		font-weight: 700
+		margin-bottom: 18px
+		+md
+			font-size: 22px
+		+sm
+			font-size: 20px
+	div
+		+clr
+		+m
+			margin-bottom: 30px
 	&--white
 		color: $white
 	&--sm-pad
@@ -136,6 +292,9 @@ strong
 .decor-block
 	padding-left: 15px
 	border-left: 3px solid $orange
+	+sm
+		padding-left: 0
+		border: none
 .video-block
 	border-top: 3px solid $orange4
 	border-bottom: 3px solid $orange4
@@ -143,6 +302,18 @@ strong
 	height: 535px
 	margin-left: auto
 	margin-right: auto
+	+r(1150)
+		width: 600px
+		height: 320px
+	+sm
+		width: 460px
+		height: 270px
+	+xs
+		width: 100%
+		max-width: 400px
+		height: 240px
+	+r(400)
+		height: 200px
 	iframe
 		width: 100%
 		height: 100%

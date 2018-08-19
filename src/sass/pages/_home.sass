@@ -1,8 +1,12 @@
 .hero
 	padding-top: 128px
+	+m
+		padding-top: 250px
 .hslider
 	padding: 0 33px
 	position: relative
+	+m
+		padding: 0
 	&__slide
 		color: $white
 	&__title
@@ -10,43 +14,106 @@
 		font-weight: 700
 		margin-bottom: 40px
 		text-align: center
+		+md
+			font-size: 24px
+			margin-bottom: 20px
+			br
+				display: none
 	&__sub-title
 		font-size: 30px
 		margin-bottom: 40px
 		text-align: center
+		+md
+			font-size: 20px
+
 	&__inner
 		font-size: 0
+
 	&__img
 		display: inline-block
 		vertical-align: top
 		margin-right: 35px
+		+md
+			display: block
+			margin-right: 0
+			text-align: center
+		img
+			max-width: 480px
+			height: auto
+			display: inline-block
+			+sm
+				max-width: 100%
+
 	&__right
 		display: inline-block
 		vertical-align: top
+
+		+md
+			display: block
+			max-width: 400px
+			margin-left: auto
+			margin-right: auto
+			text-align: center
+		.btn-border
+			+md
+				margin-bottom: 40px
 		.dot-list
-			margin-top: 60px
+			+md
+				text-align: left
+		&--sm
+			+md
+				.dot-list
+					max-width: 200px
+					margin-left: auto
+					margin-right: auto
+
+		// 
+		// 	margin-top: 60px
 	.slick-arrow
 		top: 40%
 .aft-hero-sec
 	padding-top: 60px
 	padding-bottom: 60px
+	+m
+		padding: 30px 0
 	.article
 		+clr
 		img
 			float: right
 			margin-left: 30px
+		+sm
+			img
+				float: none
+				display: block
+				margin: 0 auto 30px
+				max-width: 100%
 .low-price
 	padding-top: 48px
 	padding-bottom: 43px
+	+md
+		padding: 30px 0
 	&__inner
 		padding-left: 80px
+		+md
+			padding-left: 40px
+		+sm
+			padding-left: 0
 	.title-sm
 		margin-bottom: 40px
+		+md
+			margin-bottom: 20px
 	.title-md
 		margin-bottom: 50px
+		+md
+			margin-bottom: 25px
 .home-prods
 	padding-top: 34px
 	padding-bottom: 34px
+	.title
+		strong
+			+m
+				display: block
+				
 	&__inner
 		font-size: 0
 		max-width: 975px
@@ -60,21 +127,34 @@
 		max-width: 920px
 		margin-left: auto
 		margin-right: auto
+		+md
+			margin-bottom: 20px
 	.title
 		margin-bottom: 80px
+		+md
+			margin-bottom: 40px
 .hprod
 	// margin-bottom: 30px
 	display: inline-block
 	vertical-align: top
 	width: 420px
 	text-align: center
+	+m
+		display: block
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 10px
+
 	&__img
-		width: 320px
-		height: 290px
+		// width: 320px
+		height: 312px
 		margin-bottom: 26px
 		position: relative
 		margin-left: auto
 		margin-right: auto
+		display: flex
+		align-items: flex-end
+		justify-content: center
 		&:before
 			content: ''
 			position: absolute
@@ -82,18 +162,26 @@
 			width: 68px
 			height: 5px
 			background: $orange
-			left: 55%
+			left: 50%
 			transform: translateX(-50%)
 		img
-			width: 100%
-			height: 100%
-			object-fit: cover
+			max-width: 100%
+			// width: 100%
+			// height: 100%
+			// object-fit: cover
+
 	&__title
 		color: #010100
 		font-family: Roboto
 		font-size: 24px
 		font-weight: 700
-		margin-bottom: 12px
+		margin-bottom: 8px
+		min-height: 60px
+		+md
+			font-size: 20px
+			+sm
+				font-size: 16px
+				min-height: auto
 	a
 		display: inline-block
 		vertical-align: top
@@ -101,17 +189,11 @@
 		font-size: 24px
 		text-decoration: underline
 		margin-bottom: 15px
-
 		position: relative
-		// &:after
-		// 	content: ''
-		// 	position: absolute
-		// 	height: 2px
-		// 	width: 100%
-		// 	left: 0
-		// 	bottom: 0
-		// 	background: $black2
-		// 	+trans
+		+md
+			font-size: 20px
+			+sm
+				font-size: 16px
 		&:last-of-type
 			margin-bottom: 0
 		&:hover
@@ -119,33 +201,55 @@
 .advantages-sec
 	padding-top: 60px
 	padding-bottom: 88px
+	+md
+		padding: 30px 0
 	&__inner
 		padding-left: 36px
+		+md
+			padding-left: 0
 	.title
 		margin-bottom: 69px
+		+md
+			margin-bottom: 40px
 .form-sec
 	padding-top: 25px
 	padding-bottom: 70px
+	+md
+		padding-bottom: 25px
 
 .form-decor
 	border-left: 2px solid $white
 	border-right: 2px solid $white
 	border-bottom: 2px solid $white
+	
 	padding: 32px 0px 44px
 	position: relative
 	max-width: 945px
 	margin-left: auto
 	margin-right: auto
+	+xs
+		border: none
+	.title-sm 
+		+xs
+			&:before, &:after
+				display: none
 	p
 		font-size: 18px
 		text-align: center
 		color: $white
 		margin-bottom: 46px
+		+md
+			padding: 0 10px
+			font-size: 16px
 	&__inner
 		padding: 0 20px
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+m
+			display: block
+			text-align: center
+			padding: 0
 	.title-sm--line
 		position: absolute
 		top: 1px
@@ -157,12 +261,25 @@
 	padding-top: 66px
 	padding-bottom: 21px
 	margin-bottom: 63px
+	+md
+		padding-top: 30px
+		margin-bottom: 30px
 	&__inner
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		
+
 		.why-we-item
 			flex-basis: 25%
+			+md
+				flex-basis: 50%
+			+sm
+				flex-basis: 100%
+				p
+					max-width: 500px
+					margin-left: auto
+					margin-right: auto
 	.title
 		margin-bottom: 65px
 .why-we-item
@@ -181,22 +298,39 @@
 		font-size: 18px
 .how-work
 	margin-bottom: 69px
+	+md
+		margin-bottom: 30px
 	&__inner
 		max-width: 945px
 		margin-left: auto
 		margin-right: auto
+	
 	.title
 		margin-bottom: 50px
+		+md
+			margin-bottom: 25px
 	.decor-block
 		margin-bottom: 60px
-
+		+md
+			margin-bottom: 25px
+	.video-block
+		margin-bottom: 50px
+		+sm
+			margin-bottom: 30px
+		&:last-of-type
+			margin-bottom: 0
 .reviews
 	padding-top: 68px
 	padding-bottom: 75px
 	margin-bottom: 30px
+	+md
+		padding: 30px 0
 	&__inner
+
 	.title
 		margin-bottom: 72px
+		+md
+			margin-bottom: 40px
 
 .r-slider
 	&__slide
@@ -205,6 +339,10 @@
 		margin-left: auto
 		margin-right: auto
 		display: flex
+		+md
+			max-width: 700px
+		+sm
+			display: block
 	&__photo
 		border: 1px solid $orange4
 		width: 264px
@@ -213,6 +351,11 @@
 		vertical-align: top
 		flex-grow: 0
 		flex-shrink: 0
+		+sm
+			margin-left: auto
+			margin-right: auto
+			display: block
+			margin-bottom: 10px
 		img
 			width: 100%
 			height: 100%
@@ -225,6 +368,8 @@
 		color: $white
 		font-weight: 300
 		padding-left: 28px
+		+sm
+			padding-left: 0
 	&__top
 		border-bottom: 2px solid #fdb51a
 		padding-top: 5px
@@ -236,6 +381,12 @@
 	&__date
 		margin-bottom: 20px
 	&__text
+	.btn-prev 
+		+sm
+			left: -10px
+	.btn-next
+		+sm
+			right: -10px
 .pre-foot
 	margin-bottom: 16px
 	text-align: center
@@ -246,6 +397,8 @@
 	p
 		margin-bottom: 19px
 		font-size: 22px
+		+sm
+			font-size: 18px
 	.link-orange
 		margin-bottom: 16px
 	.btn

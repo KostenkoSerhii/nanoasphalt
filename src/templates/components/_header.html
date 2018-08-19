@@ -4,19 +4,25 @@
 	<div class="l">
 		<!--begin head-foot-->
 		<div class="head-foot">
-			<a href="жидкийасфальт.рф" class="head-foot__logo">
+			<a href="index.html" class="head-foot__logo">
 				<img src="img/logo-new.png" alt="log1">
 			</a>
 			<ul class="head-foot__menu">
-				<li class="is-active"><a href="жидкийасфальт.рф">Главная</a></li>
-				<li><a href="#">Материалы</a></li>
-				<li><a href="#">Как купить</a></li>
-				<li><a href="#">Контакты</a></li>
+				<li class="is-active"><a href="index.html">Главная</a></li>
+				<li class="js-drop-menu-btn" data-target="header">
+					<span >Материалы</span>
+						<div class="head-foot__drop-menu js-drop-menu-content" data-target="header">
+							<a  href="protect.html">Защита 02</a>
+							<a  href="mastic.html">Мастика 05</a>
+						</div>
+				</li>
+				<li><a href="buy.html">Как купить</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 			<div class="head-foot__contacts">
-				<a href="tel:+74994031127">
+				<a href="tel:+74993504573">
 					<i>{{mixins.icon('phone')}}</i>
-					<span>+7(499) 403-11-27</span>
+					<span>+ 7 499 350 45 73</span>
 				</a>
 				<button class="btn js-popup-link" data-popup="popup-form">Обратный звонок</button>
 			</div>

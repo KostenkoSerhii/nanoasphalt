@@ -1,0 +1,91 @@
+{% import "partials/_mixins.html" as mixins %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" media="all" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+  {# {% include "../partials/_media-tags.html" %} #}
+</head>
+<body>
+
+  <!-- BEGIN content -->
+  <div class="out">
+    {% block content %}{% endblock %}
+  </div>
+  <!-- END content -->
+
+  <!-- BEGIN scripts -->
+
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter49228417 = new Ya.Metrika2({
+                    id:49228417,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/49228417" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <!-- END scripts -->
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script>
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.663918, 37.463664],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'г. Москва, ул. Тропаревская, влад. 4.'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/marker.png',
+            // Размеры метки.
+            iconImageSize: [149,46],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [0, - 52]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+
+});
+</script>
+
+</body>
+</html>

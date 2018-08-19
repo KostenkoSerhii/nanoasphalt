@@ -3,3 +3,11 @@ ProjectTitle: nano-asfalt
 PageList:
 - file: page.html
   ready: 50
+- file: buy.html
+  ready: 50
+- file: mastic.html
+  ready: 50
+- file: protect.html
+  ready: 50
+- file: contacts.html
+  ready: 50

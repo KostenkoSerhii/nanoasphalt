@@ -12,31 +12,80 @@
 .footer
 	background: $black
 	padding: 30px 0 30px
+	.head-foot__menu
+		position: relative
+		top: -6px
+		+m
+			top: 0
 .head-foot
 	display: flex
 	justify-content: space-between
 	align-items: center
 	font-size: 0
+	+m
+		display: block
+		text-align: center
 	&__logo
 		display: block
 		position: relative
 		top: -7px
+		+m
+			top: 0
+			margin-bottom: 20px
 	&__menu
+		+m
+			margin-bottom: 20px
 		li
 			display: inline-block
 			vertical-align: top
 			margin: 0 19px
-			&.is-active, &:hover
-				a
+			position: relative
+			+md
+				margin:  0 10px
+			+sm
+				margin: 0 10px 10px
+			&.is-active
+				& > a, span
 					color: $orange
-
-		a
+			+rmin(1024)
+				&:hover
+					& > a, span
+						color: $orange
+		a, span
 			font-size: 18px
 			color: $white
 			+trans
+			cursor: pointer
+	&__drop-menu
+		position: absolute
+		top: 100% 
+		background: rgba(19,20,24,.84)
+		width: 100%
+		left: 0
+		padding: 5px
+		display: none
+		z-index: 2
+		text-align: left
+		a
+			font-size: 14px
+			color: #fff
+			font-weight: 700
+			margin-bottom: 7px
+			display: block
+			+rmin(1024)
+				&:hover
+					color: $orange
+			&:last-of-type
+				margin-bottom: 0
 	&__contacts
 		text-align: right
 		width: 195px
+		+m
+			margin-left: auto
+			margin-right: auto
+		+sm
+			max-width: 205px
+			width: auto
 		.btn
 			width: 100%
 			display: block

@@ -1,0 +1,67 @@
+.buy-wrapper
+	padding-top: 150px
+	background-size: cover
+	min-height: calc(100vh - 109px)
+	+m
+		padding-top: 260px
+.buy
+	max-width: 830px
+	margin-left: auto
+	margin-right: auto
+	padding-bottom: 100px
+	position: relative
+	+md
+		padding-bottom: 40px
+	&__bg
+		position: absolute
+		top: 60px
+		left: 110px
+		+m
+			display: none
+.buy-item
+	position: relative
+	margin-bottom: 61px
+	+sm
+		text-align: center
+		margin-bottom: 40px
+	&:last-of-type
+		margin-bottom: 0
+	&__img
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		+sm
+			position: static
+			transform: translateY(0%)
+			margin-bottom: 15px
+	&__number
+		color: #fcbf00
+		font-size: 60px
+		flex-grow: 0
+		margin-right: 23px
+		+sm
+			display: block
+			margin-right: 0
+			margin-bottom: 10px
+
+	&__inner
+		display: flex
+		align-items: center
+		padding-left: 143px
+		position: relative
+		+m
+			padding-left: 120px
+		+sm
+			padding-left: 0
+			display: block
+	p
+		color: black
+		font-size: 20px
+		font-weight: 400
+		flex-grow: 1
+		+m
+			font-size: 16px
+		a
+			text-decoration: underline
+			color: #000

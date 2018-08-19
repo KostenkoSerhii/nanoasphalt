@@ -1,0 +1,65 @@
+---
+title: купить жидкийасфальт.рф
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "components/_header.html" %}
+<!--begin buy-wrapper-->
+<div class="buy-wrapper" style="background-image: url('img/buy-bg.jpg');">
+	<!--begin l -->
+	<div class="l ">
+		<h1 class="title title--decor">Как купить?</h1>
+		<div class="buy">
+			<img class="buy__bg" src="img/buy-bg.png" alt="">
+			<div class="buy-item">
+				<div class="buy-item__inner">
+					<strong class="buy-item__number">1</strong>
+				<img class="buy-item__img" src="img/buy1.png" alt="">
+					<p>Определите, какую площадь необходимо покрыть нашей Защитой
+					и какие трещины в асфальте подлежат ремонту.</p>
+				</div>
+			</div>
+			<div class="buy-item">
+				<div class="buy-item__inner">
+					<strong class="buy-item__number">2</strong>
+				<img class="buy-item__img" src="img/buy2.png" alt="">
+					<p>После этого отправьте заявку на электронную почту <a href="mailto:liquidasfalt@gmail.com">liquidasfalt@gmail.com</a> </p>
+				</div>
+			</div>
+			<div class="buy-item">
+				<div class="buy-item__inner">
+					<strong class="buy-item__number">3</strong>
+				<img class="buy-item__img" src="img/buy3.png" alt="">
+					<p>Наши менеджеры свяжутся с Вами и проконсультируют Вас по технологии ремонта, подсчитают необходимое количество материалов и подскажут, какой инструмент вам понадобится.</p>
+				</div>
+			</div>
+			<div class="buy-item">
+				<div class="buy-item__inner">
+					<strong class="buy-item__number">4</strong>
+				<img class="buy-item__img" src="img/buy4.png" alt="">
+					<p>Вам будет выставлен счёт, после оплаты которого Вы сможете получить необходимые материалы и инструмент у нас.</p>	
+				</div>
+			</div>
+			<div class="buy-item">
+				<div class="buy-item__inner">
+					<strong class="buy-item__number">5</strong>
+				<img class="buy-item__img" src="img/buy5.png" alt="">
+					<p>Получение товара только самовывозом.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--end l -->
+</div>
+<!--end buy-wrapper-->
+
+
+
+{% include "components/_footer.html" %}
+{% include "components/_popup-form.html" %}
+{% include "components/_popup-thank.html" %}
+<a class="js-popup-thank js-popup-link" data-popup="popup-thank" href="#" style="display: none"></a>
+{% endblock %}

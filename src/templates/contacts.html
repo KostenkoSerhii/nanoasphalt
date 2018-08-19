@@ -1,0 +1,62 @@
+---
+title: Контакты жидкийасфальт.рф
+---
+{% extends "layouts/_layout-map.html" %}
+
+{% block content %}
+
+{% include "components/_header.html" %}
+<!--begin buy-wrapper-->
+<div class="buy-wrapper" style="background-image: url('img/buy-bg.jpg');">
+	<!--begin l -->
+	<div class="l ">
+		<h1 class="title title--decor">Контакты</h1>
+		<!--begin contacts-->
+		<div class="contacts">
+			<!--begin contacts__info-->
+			<div class="contacts__info">
+				<h2 class="contacts__title">ООО "МОБИТЕХ"</h2>
+				<div class="contact-item">
+					<img class="contact-item__img" src="img/location.png" alt="" >
+					<p class="contact-item__text">
+						г. Москва, ул. Тропаревская, влад. 4.
+					</p>
+				</div>
+				<div class="contact-item">
+					<img class="contact-item__img" src="img/phone.png" alt="" >
+					<p class="contact-item__text contact-item__text--right">
+						<span>Тел: +7 (499) 350-45-73 </span>
+						<span>+7 (909) 647-03-49</span>
+					</p>
+				</div>
+				<div class="contact-item">
+					<img class="contact-item__img" src="img/email.png" alt="" >
+					<p class="contact-item__text">
+						E-mail: liquidasfalt@gmail.com
+					</p>
+				</div>
+				<div class="contact-item">
+					<img class="contact-item__img" src="img/cloack.png" alt="" >
+					<p class="contact-item__text">
+						пн-пт 9:00 - 18:00
+					</p>
+				</div>
+			</div>
+			<!--end contacts__info-->
+			<!--begin contacts__map-->
+			<div class="contacts__map">
+				<div id="map"></div>
+			</div>
+			<!--end contacts__map-->
+		</div>
+		<!--end contacts-->
+	</div>
+	<!--end l -->
+</div>
+<!--end buy-wrapper-->
+
+{% include "components/_footer.html" %}
+{% include "components/_popup-form.html" %}
+{% include "components/_popup-thank.html" %}
+<a class="js-popup-thank js-popup-link" data-popup="popup-thank" href="#" style="display: none"></a>
+{% endblock %}

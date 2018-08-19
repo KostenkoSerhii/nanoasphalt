@@ -14,9 +14,10 @@
 	background-color: $orange
 	border: 1px solid $orange
 	+trans
-	&:hover
-		background: $white
-		color: $orange
+	+rmin(1024)
+		&:hover
+			background: $white
+			color: $orange
 	&--big
 		padding: 6px 5px 6px
 .btn-border
@@ -31,8 +32,9 @@
 	background-image: linear-gradient(to top, #fda701 0%, #fdd601 100%)
 	box-shadow: 0 0 10px 1px transparent
 	+trans
-	&:hover
-		box-shadow: 0 0 10px 1px $black
+	+rmin(1024)
+		&:hover
+			box-shadow: 0 0 10px 1px $black
 .btn-simple
 	min-width: 242px
 	padding: 10px 10px 11px
@@ -43,7 +45,8 @@
 	font-size: 20px
 	color: $black
 	+trans
-	&:hover
-		background: $white
-		color: $orange
+	+rmin(1024)
+		&:hover
+			background: $white
+			color: $orange
 

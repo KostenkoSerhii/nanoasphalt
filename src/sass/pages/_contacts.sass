@@ -1,0 +1,76 @@
+.contacts
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	padding-bottom: 120px
+	+m
+		display: block
+		padding-bottom: 40px
+	&__info
+		width: 430px
+		padding-right: 15px
+		+m
+			margin-left: auto
+			margin-right: auto
+			padding-right: 0
+		+sm
+			width: auto
+	&__map
+		width: 650px
+		height: 580px
+		border: 2px solid #fdb301
+		+r(1100)
+			width: 450px
+			height: 400px
+		+m
+			margin-left: auto
+			margin-right: auto
+		+xs
+			width: 100%
+			height: 300px
+		div
+			width: 100%
+			height: 100%
+	&__title
+		font-size: 24px
+		font-weight: 700
+		color: #000
+		padding-left: 90px
+		margin-bottom: 65px
+		+md
+			font-size: 20px
+			padding-left: 0
+			text-align: center
+			margin-bottom: 30px
+		+xs
+			font-size: 18px
+	
+.contact-item
+	padding-left: 90px
+	position: relative
+	margin-bottom: 60px
+	+sm
+		margin-bottom: 30px
+		padding-left: 60px
+	&__img
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		position: absolute
+		+sm
+			max-width: 40px
+	&__text
+		font-size: 18px
+		color: #000
+		+sm
+			font-size: 16px
+		span
+			display: block
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 0
+		&--right
+			text-align: right
+			max-width: 194px
+			+sm
+				max-width: 175px
